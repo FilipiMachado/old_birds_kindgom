@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Estiliza o body */
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  /* Header/Logo Título */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+  }
+  
+  /* Estiliza o topo da barra de navegação */
+  .navbar {
+    display: flex;
+    background-color: rgb(63, 63, 63);
+  }
+  
+  /* Estiliza as barras de navegação */
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Muda a cor com :hover */
+  .navbar a:hover {
+    background-color: #1abc9c;
+    color: white;
+  }
+  
+  /* Coluna container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Cria duas coluna desiguais (em tamanho) que ficam uma ao lado da outra */
+  /* Coluna da Esquerda (sidebar) */
+  .side {
+    flex: 30%;
+    background-color: #ddd;
+    padding: 20px;
+  }
+  
+  /* Coluna Principal (main) */
+  .main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Cor Fundo Main */
+  .backgr_main {
+    background-color: #ddd;
+    width: 100%;
+    padding: 20px;
+  }
+  .backgr_main_he {
+    height: 200px;
+  } 
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #1abc9c;
+    margin: 10px 0 0 0;
+  }
+  /* Aumentar Imagem Produtos*/
+  .product_expand:hover img {
+      width: 260px;
+      height: 341px;
+  }
+  
+  /* Layout Responsivo - quando a resolução for menor que 700 pixels de largura, faz com que as duas colunas façam uma pilha uma sobre a outra, ao invés de uma ao lado da outra */
+  @media screen and (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+  }
